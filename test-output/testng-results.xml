@@ -2,56 +2,68 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="54" started-at="2021-10-25T07:21:30 UTC" finished-at="2021-10-25T07:21:30 UTC">
+  <suite name="Suite" duration-ms="10410" started-at="2021-10-28T06:55:43 UTC" finished-at="2021-10-28T06:55:54 UTC">
     <groups>
-      <group name="sanity">
-        <method signature="Testcase2.CCTest()[pri:0, instance:test.Testcase2@536aaa8d]" name="CCTest" class="test.Testcase2"/>
-        <method signature="Testcase2.CreditCardTest()[pri:0, instance:test.Testcase2@536aaa8d]" name="CreditCardTest" class="test.Testcase2"/>
-      </group> <!-- sanity -->
     </groups>
-    <test name="Default test" duration-ms="54" started-at="2021-10-25T07:21:30 UTC" finished-at="2021-10-25T07:21:30 UTC">
-      <class name="test.Testcase2">
-        <test-method status="PASS" signature="BeforeTest()[pri:0, instance:test.Testcase2@536aaa8d]" name="BeforeTest" is-config="true" duration-ms="6" started-at="2021-10-25T07:21:30 UTC" finished-at="2021-10-25T07:21:30 UTC">
+    <test name="Test" duration-ms="10410" started-at="2021-10-28T06:55:43 UTC" finished-at="2021-10-28T06:55:54 UTC">
+      <class name="test.LoginTest">
+        <test-method status="PASS" signature="ReportSetup()[pri:0, instance:test.LoginTest@51e2adc7]" name="ReportSetup" is-config="true" duration-ms="180" started-at="2021-10-28T06:55:43 UTC" finished-at="2021-10-28T06:55:44 UTC">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- BeforeTest -->
-        <test-method status="PASS" signature="BeforeClassM()[pri:0, instance:test.Testcase2@536aaa8d]" name="BeforeClassM" is-config="true" duration-ms="0" started-at="2021-10-25T07:21:30 UTC" finished-at="2021-10-25T07:21:30 UTC">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- BeforeClassM -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:test.Testcase2@536aaa8d]" name="setup" is-config="true" duration-ms="1" started-at="2021-10-25T07:21:30 UTC" finished-at="2021-10-25T07:21:30 UTC">
+        </test-method> <!-- ReportSetup -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:test.LoginTest@51e2adc7]" name="setup" is-config="true" duration-ms="1803" started-at="2021-10-28T06:55:44 UTC" finished-at="2021-10-28T06:55:45 UTC">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="CCTest()[pri:0, instance:test.Testcase2@536aaa8d]" name="CCTest" duration-ms="5" started-at="2021-10-25T07:21:30 UTC" description="This is credit card Test" finished-at="2021-10-25T07:21:30 UTC">
+        <test-method status="PASS" signature="negetivelogin(java.lang.String,java.lang.String)[pri:0, instance:test.LoginTest@51e2adc7]" name="negetivelogin" duration-ms="3822" started-at="2021-10-28T06:55:45 UTC" finished-at="2021-10-28T06:55:49 UTC">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[abc@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ABCdefg1234##]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CCTest -->
-        <test-method status="PASS" signature="Teardown()[pri:0, instance:test.Testcase2@536aaa8d]" name="Teardown" is-config="true" duration-ms="0" started-at="2021-10-25T07:21:30 UTC" finished-at="2021-10-25T07:21:30 UTC">
+        </test-method> <!-- negetivelogin -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:test.LoginTest@51e2adc7]" name="teardown" is-config="true" duration-ms="88" started-at="2021-10-28T06:55:49 UTC" finished-at="2021-10-28T06:55:49 UTC">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Teardown -->
-        <test-method status="PASS" signature="CreditCardTest()[pri:0, instance:test.Testcase2@536aaa8d]" name="CreditCardTest" duration-ms="2" started-at="2021-10-25T07:21:30 UTC" description="This is credit card Test" depends-on-methods="test.Testcase2.CCTest" finished-at="2021-10-25T07:21:30 UTC">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CreditCardTest -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:test.Testcase2@536aaa8d]" name="setup" is-config="true" duration-ms="0" started-at="2021-10-25T07:21:30 UTC" finished-at="2021-10-25T07:21:30 UTC">
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:test.LoginTest@51e2adc7]" name="setup" is-config="true" duration-ms="1551" started-at="2021-10-28T06:55:49 UTC" finished-at="2021-10-28T06:55:51 UTC">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="Teardown()[pri:0, instance:test.Testcase2@536aaa8d]" name="Teardown" is-config="true" duration-ms="0" started-at="2021-10-25T07:21:30 UTC" finished-at="2021-10-25T07:21:30 UTC">
+        <test-method status="PASS" signature="positivelogin(java.lang.String,java.lang.String)[pri:0, instance:test.LoginTest@51e2adc7]" name="positivelogin" duration-ms="2427" started-at="2021-10-28T06:55:51 UTC" finished-at="2021-10-28T06:55:53 UTC">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[abc@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ABCdefg1234##]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Teardown -->
-        <test-method status="PASS" signature="AfterTest()[pri:0, instance:test.Testcase2@536aaa8d]" name="AfterTest" is-config="true" duration-ms="0" started-at="2021-10-25T07:21:30 UTC" finished-at="2021-10-25T07:21:30 UTC">
+        </test-method> <!-- positivelogin -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:test.LoginTest@51e2adc7]" name="teardown" is-config="true" duration-ms="76" started-at="2021-10-28T06:55:53 UTC" finished-at="2021-10-28T06:55:53 UTC">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AfterTest -->
-        <test-method status="PASS" signature="AfterClassM()[pri:0, instance:test.Testcase2@536aaa8d]" name="AfterClassM" is-config="true" duration-ms="0" started-at="2021-10-25T07:21:30 UTC" finished-at="2021-10-25T07:21:30 UTC">
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="ReportTearDown()[pri:0, instance:test.LoginTest@51e2adc7]" name="ReportTearDown" is-config="true" duration-ms="390" started-at="2021-10-28T06:55:53 UTC" finished-at="2021-10-28T06:55:54 UTC">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AfterClassM -->
-      </class> <!-- test.Testcase2 -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- ReportTearDown -->
+      </class> <!-- test.LoginTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

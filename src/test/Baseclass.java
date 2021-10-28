@@ -1,42 +1,51 @@
 package test;
 
-import org.testng.annotations.AfterClass;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+
 public class Baseclass {
+
+	public static WebDriver driver;
+	public static ExtentReports report;
+	public static ExtentTest test;
 	
-	@BeforeTest (alwaysRun=true) //exec only once
-	public void BeforeTest() {
-		System.out.println("Inside BeforeTest");
+	@BeforeTest
+	public void ReportSetup() {
+		report = new ExtentReports("ExtentReports.html"); 
 	}
 	
-	@BeforeClass(alwaysRun=true)
-	public void BeforeClassM() {
-		System.out.println("Inside Before Class");
-	}
-	
-	@BeforeMethod(alwaysRun=true) //exec each method
+	@BeforeMethod
 	public void setup() {
-		System.out.println("Inside Setup");
+
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver", "chromedriver");
+		driver = new ChromeDriver();
+		driver.get("https://www.simplilearn.com/");
+		//System.setProperty("webdriver.gecko.driver", "geckodriver");
+		//WebDriver driver1 = new GeckoDriverInfo();
+		//driver1.get("https://www.simplilearn.com/");
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(4000, TimeUnit.MILLISECONDS);			
+	}
+
+	@AfterMethod
+	public void teardown() {
+		driver.quit();
 	}
 	
-	@AfterMethod(alwaysRun=true)
-	public void Teardown() {
-		System.out.println("After Teardown");
-	}
-	
-	@AfterClass(alwaysRun=true)
-	public void AfterClassM() {
-		System.out.println("Inside After Class");
-	}
-	
-	@AfterTest(alwaysRun=true)
-	public void AfterTest() {
-		System.out.println("After Test Method");
+	@AfterTest
+	public void ReportTearDown() {
+		report.flush();
+		report.close();
 	}
 
 }
